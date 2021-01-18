@@ -29,9 +29,20 @@ border-right: 1px solid #999;}
 font-size: 18px;
 color: #1e1e1e;
 padding:10px 30px;
-
 }
 
+#nav .depth1 > li:hover 
+>a { color:#00529b;}
+#header #nav .depth1 > li:hover .depth2{ display: block;}
+
+.depth2 {background: #555; font-size: 14px; color:#fff;
+    position: absolute;
+    top:100% ; left:0;
+    width:100%;text-align: center;
+display: none;}
+
+
+#nav .depth1 > li:hover .depth2 
 /* section */
 
 #section .slide > img { padding: 15px 0;height: 650px;}
@@ -79,18 +90,25 @@ padding-bottom: 25px;
 line-height: 1.2em;}
 .article2 .intro .whattext >a { padding:8px 40px; border:1px solid #fff;}
 
-.article2 .what1 { background: url(../img/what1.jpg) no-repeat center;}
-.article2 .what2 { background: url(../img/what2.jpg) no-repeat center;}
-.article2 .what3 { background: url(../img/what3.jpg) no-repeat center;}
-.article2 .what4 { background: url(../img/what4.jpg) no-repeat center;}
+.article2 .what1 { background: url(../img/what1.jpg) no-repeat center;
+background-size: cover;}
+.article2 .what2 { background: url(../img/what2.jpg) no-repeat center;
+    background-size: cover;}
+.article2 .what3 { background: url(../img/what3.jpg) no-repeat center;
+    background-size: cover;}
+.article2 .what4 { background: url(../img/what4.jpg) no-repeat center;
+    background-size: cover;
+margin-right: 0;}
 
 .article2 .whattext { position: absolute;
 top:75%; left:50%;
 transform: translate(-50%,-50%);}
 
-.article3 { background: url(../img/intro_bg.jpg) no-repeat center;
+.article3 { background: url(../img/intro_bg.jpg) no-repeat center top;
 height: 304px;
-margin:65px 0 60px 0;
+background-size: cover;
+background-attachment: fixed;
+margin:100px 0 60px 0;
 text-align: center;
 position: relative;
 }
@@ -123,28 +141,42 @@ text-align: center;
 }
 
 .product > ul > li > img { width:100%;
-    }
+    transition: all 0.5s;}
+
+
+.product > ul > li > img:hover {opacity: 0.6;}
 .producttext h3 { font-size: 17px;
-padding: 20px 0;
-color: #000;}
+margin:25px;
+color: #000;
+font-weight: bold;}
 
 .producttext p { font-size: 14px;
-padding:0 25px 25px 25px;
-line-height: 1.2em;}
+margin: 25px;
+line-height: 1.5em;}
 
 
 #footer { background: #333;
 color: #ddd;
 padding: 30px 0; text-align: center;
+line-height: 18px;
 }
 
-#footer .contact >a >span { display: none;}
-#footer .contact >a >i { font-size: 17px;
-color:#fff; padding: 0px 15px 20px ;}
 #footer .company span { font-size: 12px;
 padding:15px 15px;}
 #footer .copyright span{font-size: 12px; 
-    padding:20px 0 30px 0;}
+    padding:20px 0 px ;}
 #footer .butt a {  font-size: 11px;
 padding:3px 10px; border:1px solid #ddd}
+
+#footer .contact a {font-size: 14px;
+    display: inline-block;
+    width:32px; height: 32px; line-height: 32px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+
+#footer .contact a:hover { background: rgba(255,255,255,0.3);}
 
